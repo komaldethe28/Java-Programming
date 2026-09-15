@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>City Explorer</title>
+
+<style>
+
+    /* ==============================
+       RESET
+    ============================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+
+        background: #08090f;
+
+        color: #f8fafc;
+
+        min-height: 100vh;
+
+        overflow-x: hidden;
+    }
+
+
+    /* ==============================
+       BACKGROUND GLOW
+    ============================== */
+
+    body::before {
+
+        content: "";
+
+        position: fixed;
+
+        width: 450px;
+        height: 450px;
+
+        background: #6d28d9;
+
+        border-radius: 50%;
+
+        filter: blur(180px);
+
+        opacity: 0.15;
+
+        top: -180px;
+        left: -150px;
+
+        pointer-events: none;
+    }
+
+
+    body::after {
+
+        content: "";
+
+        position: fixed;
+
+        width: 400px;
+        height: 400px;
+
+        background: #2563eb;
+
+        border-radius: 50%;
+
+        filter: blur(180px);
+
+        opacity: 0.12;
+
+        bottom: -150px;
+        right: -150px;
+
+        pointer-events: none;
+    }
+
+
+    /* ==============================
+       NAVBAR
+    ============================== */
+
+    nav {
+
+        height: 72px;
+
+        padding: 0 7%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        background: rgba(8, 9, 15, 0.75);
+
+        backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid #1e2230;
+
+        position: sticky;
+
+        top: 0;
+
+        z-index: 100;
+    }
+
+
+    .logo {
+
+        font-size: 21px;
+
+        font-weight: 800;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .logo span {
+
+        color: #8b5cf6;
+    }
+
+
+    .nav-links {
+
+        display: flex;
+
+        gap: 30px;
+    }
+
+
+    .nav-links a {
+
+        color: #94a3b8;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        transition: 0.3s;
+    }
+
+
+    .nav-links a:hover {
+
+        color: #a78bfa;
+    }
+
+
+    .nav-button {
+
+        padding: 9px 16px;
+
+        border-radius: 9px;
+
+        background: #171923;
+
+        border: 1px solid #292d3a;
+
+        color: #e2e8f0;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        transition: 0.3s;
+    }
+
+
+    .nav-button:hover {
+
+        border-color: #8b5cf6;
+
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+    }
+
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding: 100px 20px 70px;
+
+        position: relative;
+    }
+
+
+    .hero-badge {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        padding: 7px 13px;
+
+        border-radius: 30px;
+
+        background: rgba(139, 92, 246, 0.1);
+
+        border: 1px solid rgba(139, 92, 246, 0.25);
+
+        color: #c4b5fd;
+
+        font-size: 12px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .dot {
+
+        width: 7px;
+
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: #8b5cf6;
+
+        box-shadow: 0 0 10px #8b5cf6;
+    }
+
+
+    .hero h1 {
+
+        max-width: 850px;
+
+        font-size: clamp(45px, 7vw, 76px);
+
+        line-height: 1.05;
+
+        letter-spacing: -3px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .gradient-text {
+
+        background: linear-gradient(
+            90deg,
+            #a78bfa,
+            #60a5fa,
+            #c084fc
+        );
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        color: transparent;
+    }
+
+
+    .hero p {
+
+        max-width: 650px;
+
+        color: #8b95a7;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* ==============================
+       HERO BUTTON
+    ============================== */
+
+    .hero-buttons {
+
+        display: flex;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .primary-button {
+
+        padding: 12px 20px;
+
+        background: #7c3aed;
+
+        color: white;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+    }
+
+
+    .primary-button:hover {
+
+        background: #8b5cf6;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 10px 30px rgba(124, 58, 237, 0.3);
+    }
+
+
+    .secondary-button {
+
+        padding: 12px 20px;
+
+        background: #11131c;
+
+        border: 1px solid #292d3a;
+
+        color: #cbd5e1;
+
+        border-radius: 10px;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        transition: 0.3s;
+    }
+
+
+    .secondary-button:hover {
+
+        border-color: #475569;
+
+        transform: translateY(-2px);
+    }
+
+
+    /* ==============================
+       STATISTICS
+    ============================== */
+
+    .stats {
+
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding: 0 20px 70px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 18px;
+    }
+
+
+    .stat {
+
+        background: #10121a;
+
+        border: 1px solid #202331;
+
+        border-radius: 16px;
+
+        padding: 22px;
+
+        transition: 0.3s;
+    }
+
+
+    .stat:hover {
+
+        border-color: #34394a;
+
+        transform: translateY(-4px);
+    }
+
+
+    .stat-icon {
+
+        font-size: 22px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .stat h3 {
+
+        font-size: 27px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .stat p {
+
+        color: #727b8c;
+
+        font-size: 13px;
+    }
+
+
+    /* ==============================
+       CITY SECTION
+    ============================== */
+
+    .cities {
+
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding: 0 20px 90px;
+    }
+
+
+    .section-heading {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        margin-bottom: 28px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 27px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .section-heading p {
+
+        color: #727b8c;
+
+        font-size: 14px;
+    }
+
+
+    .city-count {
+
+        color: #7c3aed;
+
+        font-size: 13px;
+
+        font-weight: bold;
+    }
+
+
+    /* ==============================
+       CITY GRID
+    ============================== */
+
+    .city-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 24px;
+    }
+
+
+    /* ==============================
+       CITY CARD
+    ============================== */
+
+    .city-card {
+
+        background: #10121a;
+
+        border: 1px solid #202331;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+
+        transition: 0.4s;
+
+        position: relative;
+    }
+
+
+    .city-card:hover {
+
+        transform: translateY(-8px);
+
+        border-color: #4c3b78;
+
+        box-shadow:
+            0 20px 60px rgba(0,0,0,0.45),
+            0 0 30px rgba(124,58,237,0.08);
+    }
+
+
+    /* ==============================
+       IMAGE
+    ============================== */
+
+    .city-image {
+
+        height: 280px;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+
+
+    .city-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: 0.6s;
+    }
+
+
+    .city-card:hover .city-image img {
+
+        transform: scale(1.07);
+    }
+
+
+    .city-image::after {
+
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background:
+            linear-gradient(
+                transparent 45%,
+                rgba(8,9,15,0.9)
+            );
+    }
+
+
+    .city-number {
+
+        position: absolute;
+
+        top: 15px;
+
+        left: 15px;
+
+        z-index: 2;
+
+        background: rgba(8,9,15,0.75);
+
+        backdrop-filter: blur(10px);
+
+        border: 1px solid rgba(255,255,255,0.1);
+
+        padding: 6px 10px;
+
+        border-radius: 8px;
+
+        color: #cbd5e1;
+
+        font-size: 11px;
+
+        font-weight: bold;
+    }
+
+
+    .city-state {
+
+        position: absolute;
+
+        bottom: 15px;
+
+        left: 18px;
+
+        z-index: 2;
+
+        color: #c4b5fd;
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* ==============================
+       CARD CONTENT
+    ============================== */
+
+    .city-content {
+
+        padding: 23px;
+    }
+
+
+    .city-content h3 {
+
+        font-size: 27px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .city-content p {
+
+        color: #7e8798;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* ==============================
+       CARD BUTTONS
+    ============================== */
+
+    .card-buttons {
+
+        display: flex;
+
+        gap: 10px;
+    }
+
+
+    .explore {
+
+        flex: 1;
+
+        text-align: center;
+
+        padding: 11px;
+
+        border-radius: 9px;
+
+        background: #7c3aed;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        transition: 0.3s;
+    }
+
+
+    .explore:hover {
+
+        background: #8b5cf6;
+
+        box-shadow:
+            0 8px 20px rgba(124,58,237,0.25);
+    }
+
+
+    .map-button {
+
+        padding: 11px 15px;
+
+        border-radius: 9px;
+
+        background: #171923;
+
+        border: 1px solid #292d3a;
+
+        color: #cbd5e1;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        transition: 0.3s;
+    }
+
+
+    .map-button:hover {
+
+        border-color: #475569;
+
+        background: #1c1f2b;
+    }
+
+
+    /* ==============================
+       MAP
+    ============================== */
+
+    .map {
+
+        padding: 0 23px 23px;
+    }
+
+
+    .map iframe {
+
+        width: 100%;
+
+        height: 230px;
+
+        border: 0;
+
+        border-radius: 12px;
+
+        opacity: 0.85;
+
+        transition: 0.3s;
+    }
+
+
+    .map iframe:hover {
+
+        opacity: 1;
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    footer {
+
+        border-top: 1px solid #1e2230;
+
+        background: #07080d;
+
+        padding: 35px 20px;
+
+        text-align: center;
+
+        color: #64748b;
+
+        font-size: 13px;
+    }
+
+
+    footer strong {
+
+        color: #8b5cf6;
+    }
+
+
+    /* ==============================
+       RESPONSIVE
+    ============================== */
+
+    @media (max-width: 800px) {
+
+        .city-grid {
+
+            grid-template-columns: 1fr;
+        }
+
+
+        .stats {
+
+            grid-template-columns: 1fr;
+        }
+
+
+        .nav-links {
+
+            display: none;
+        }
+
+
+        .hero {
+
+            padding-top: 70px;
+        }
+
+
+        .hero h1 {
+
+            letter-spacing: -2px;
+        }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+        .hero h1 {
+
+            font-size: 40px;
+        }
+
+
+        .section-heading {
+
+            align-items: flex-start;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .city-image {
+
+            height: 230px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ==============================
+     NAVBAR
+============================== -->
+
+<nav>
+
+    <div class="logo">
+        City<span>Explorer</span>
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#">Home</a>
+
+        <a href="#cities">Cities</a>
+
+        <a href="#about">About</a>
+
+    </div>
+
+
+    <a
+        href="#cities"
+        class="nav-button">
+
+        Explore →
+
+    </a>
+
+</nav>
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<section class="hero">
+
+    <div class="hero-badge">
+
+        <span class="dot"></span>
+
+        INDIA • CITY DISCOVERY
+
+    </div>
+
+
+    <h1>
+
+        Explore places that
+        <span class="gradient-text">
+            tell a story.
+        </span>
+
+    </h1>
+
+
+    <p>
+
+        Discover India's most fascinating cities,
+        explore their culture and history, and find
+        them instantly on the map.
+
+    </p>
+
+
+    <div class="hero-buttons">
+
+        <a
+            href="#cities"
+            class="primary-button">
+
+            Explore Cities →
+
+        </a>
+
+
+        <a
+            href="#about"
+            class="secondary-button">
+
+            About Project
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     STATISTICS
+============================== -->
+
+<section class="stats">
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            🏙️
+        </div>
+
+        <h3>04</h3>
+
+        <p>
+            Featured Cities
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            📍
+        </div>
+
+        <h3>04</h3>
+
+        <p>
+            Map Locations
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            🇮🇳
+        </div>
+
+        <h3>02</h3>
+
+        <p>
+            States Covered
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- ==============================
+     CITY SECTION
+============================== -->
+
+<section
+    class="cities"
+    id="cities">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Featured Cities
+            </h2>
+
+            <p>
+                A small collection of India's
+                vibrant destinations.
+            </p>
+
+        </div>
+
+
+        <div class="city-count">
+
+            04 CITIES
+
+        </div>
+
+    </div>
+
+
+    <div class="city-grid">
+
+
+        <!-- =====================
+             PUNE
+        ====================== -->
+
+        <article class="city-card">
+
+
+            <div class="city-image">
+
+                <img
+                    src="https://media.gettyimages.com/id/1186355743/photo/pune-railway-station-india.jpg?s=612x612&w=gi&k=20&c=zGReR1ItC6dk6w-ybALudc-MeEvHwitlTsMZHZa5tbA="
+                    alt="Pune">
+
+
+                <span class="city-number">
+                    01
+                </span>
+
+
+                <span class="city-state">
+                    📍 MAHARASHTRA
+                </span>
+
+            </div>
+
+
+            <div class="city-content">
+
+                <h3>
+                    Pune
+                </h3>
+
+
+                <p>
+
+                    A vibrant city known for its
+                    educational institutions, pleasant
+                    weather, history and cultural heritage.
+
+                </p>
+
+
+                <div class="card-buttons">
+
+                    <a
+                        href="https://en.wikipedia.org/wiki/Pune"
+                        target="_blank"
+                        class="explore">
+
+                        Explore City →
+
+                    </a>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/Pune"
+                        target="_blank"
+                        class="map-button">
+
+                        📍 Map
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </article>
+
+
+        <!-- =====================
+             MUMBAI
+        ====================== -->
+
+        <article class="city-card">
+
+
+            <div class="city-image">
+
+                <img
+                    src="https://t3.ftcdn.net/jpg/03/55/64/04/360_F_355640480_FKKv2BQwqY6sMa6jmEGVPnEndX1GPtJU.jpg"
+                    alt="Mumbai">
+
+
+                <span class="city-number">
+                    02
+                </span>
+
+
+                <span class="city-state">
+                    📍 MAHARASHTRA
+                </span>
+
+            </div>
+
+
+            <div class="city-content">
+
+                <h3>
+                    Mumbai
+                </h3>
+
+
+                <p>
+
+                    India's financial capital, famous
+                    for Bollywood, Marine Drive, its
+                    skyline and energetic lifestyle.
+
+                </p>
+
+
+                <div class="card-buttons">
+
+                    <a
+                        href="https://en.wikipedia.org/wiki/Mumbai"
+                        target="_blank"
+                        class="explore">
+
+                        Explore City →
+
+                    </a>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/Mumbai"
+                        target="_blank"
+                        class="map-button">
+
+                        📍 Map
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Mumbai,Maharashtra&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </article>
+
+
+        <!-- =====================
+             NAGPUR
+        ====================== -->
+
+        <article class="city-card">
+
+
+            <div class="city-image">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqmugiZ7l91u4_Jgcdh2_7MojnWaE0CdTCchSJkoaKHXgiudrdN8MbyiOO&s=10"
+                    alt="Nagpur">
+
+
+                <span class="city-number">
+                    03
+                </span>
+
+
+                <span class="city-state">
+                    📍 MAHARASHTRA
+                </span>
+
+            </div>
+
+
+            <div class="city-content">
+
+                <h3>
+                    Nagpur
+                </h3>
+
+
+                <p>
+
+                    Known as the Orange City, Nagpur
+                    is an important cultural and
+                    commercial centre of Maharashtra.
+
+                </p>
+
+
+                <div class="card-buttons">
+
+                    <a
+                        href="https://en.wikipedia.org/wiki/Nagpur"
+                        target="_blank"
+                        class="explore">
+
+                        Explore City →
+
+                    </a>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/Nagpur"
+                        target="_blank"
+                        class="map-button">
+
+                        📍 Map
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Nagpur,Maharashtra&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </article>
+
+
+        <!-- =====================
+             LUCKNOW
+        ====================== -->
+
+        <article class="city-card">
+
+
+            <div class="city-image">
+
+                <img
+                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b5/28/7c/chhota-imambara.jpg?w=1200&h=700&s=1"
+                    alt="Lucknow">
+
+
+                <span class="city-number">
+                    04
+                </span>
+
+
+                <span class="city-state">
+                    📍 UTTAR PRADESH
+                </span>
+
+            </div>
+
+
+            <div class="city-content">
+
+                <h3>
+                    Lucknow
+                </h3>
+
+
+                <p>
+
+                    The City of Nawabs, known for its
+                    grand architecture, traditional food
+                    and rich cultural heritage.
+
+                </p>
+
+
+                <div class="card-buttons">
+
+                    <a
+                        href="https://en.wikipedia.org/wiki/Lucknow"
+                        target="_blank"
+                        class="explore">
+
+                        Explore City →
+
+                    </a>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/Lucknow"
+                        target="_blank"
+                        class="map-button">
+
+                        📍 Map
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="map">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Lucknow,Uttar+Pradesh&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer id="about">
+
+    <p>
+
+        Built with HTML & CSS •
+
+        <strong>
+            CityExplorer
+        </strong>
+
+        © 2026
+
+    </p>
+
+</footer>
+```
+
+</body>
+
+</html>

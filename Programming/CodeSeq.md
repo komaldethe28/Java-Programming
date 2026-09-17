@@ -12,3 +12,6 @@
 12. Sum of prime digit- SumPrime
 13. Product of prime digit- ProductPrime
 14. Prime Number
+15. Factorial of each digit- DigitFact
+16. Strong number (if oiginal value & sum value of factorial of digit are same then it is strong number)
+17. Factorial Of Prime Digit

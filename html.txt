@@ -1,0 +1,67 @@
+it occupy view port width
+it start in new line
+we can provide height and width
+exa.= <h1>,  <p>, <li> etc...
+
+** inline elements= it occupy only content width
+it start in a same line
+we cant provide height and width 
+exa.= formatting ags ,<a> , <input> etc...
+
+** attributs= attributs means properties
+which given to the tags to provide additional information aout the tags
+attributs are given in opening tags	
+	types- 
+		1) core attributes- the attr which are use in each and every tag are known as core atributs
+		exa.- title, id etc.
+(note- title attr use to provide toolkit to the element) 
+
+		2) Element specific attr- the attr which are used in specific tags only particular tags 
+		exa.- target, src, at etc...
+
+
+**List= 
+collection of data
+	types-
+	1) Ordered list- if the data will display in the form of numerical format by default
+		we can change order in to alphabetic / roman num. by using type attr
+		attr used i ordered list - type, reverse, start
+		
+	2) Unordered list- where the data will display in the form of bllet points
+		here no need to follow any seq.
+		the default type is disk
+		we can use type attr to change the squre and circle 
+		
+	3) Description list- this list is used to descry. the data and display it o UI 
+		tags used in disc. list -> <dl>= dic. list, <dt>=disc term ,<dd>=data disc.
+
+
+Semantic tag=(imp.)
+	are self explanatory tags.
+	where the tag name suggest purpose of the tag.
+	use to increase readability of code.
+	example:- excluding- div , spam all are semantic tags.
+	this tags are SEO friendly tags
+	
+Table=
+	table is use to visualizwethe data in rows and columns
+	horiz. are rows and vertical are the columns
+	we always create table row by row
+	tags using tables-> 1. table
+					2. tr
+					3. td
+					4. th
+					5. tbody, thead, tbody ,tfoot = for semantics
+	attr. use with table-> 
+			border cellpading (space btw content and border), cellspacing (space btw cells), rowspan(merge cell wise) , collspan(merge column wise)
+
+
+
+
+
+
+
+
+
+
+

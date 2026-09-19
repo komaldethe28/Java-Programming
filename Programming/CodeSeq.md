@@ -15,3 +15,17 @@
 15. Factorial of each digit- DigitFact
 16. Strong number (if oiginal value & sum value of factorial of digit are same then it is strong number)
 17. Factorial Of Prime Digit
+18. BaseToThePower
+19. Armstrong Number (Count digit then power the count to all digit and add digit, if addition is the og number then the number is armstrong num else its not)-ArmstrongNum
+20. Sum Of Outer Digit-SumOfOuterDigit
+21. Sum Of Inner Digit-SumOfInnerDigit
+22. XylemNum (Sum of oter digit is equal to the sum of inner digit) -XylemNum.java
+
+import java.util.Scanner;
+class {
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a number:");
+        int num= sc.nextInt();
+    }
+}

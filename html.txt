@@ -57,6 +57,65 @@ Table=
 
 
 
+19/9
+form=
+it use take i/p from user
+
+tags use i form=
+1. <form>=it hold all the form related content
+2. <input>= inline and unpaid ele. which can take verity of inputs like checkbox, radio, email password, etc
+3.<button>= default type is submit which we can change to reset that clear current entire form
+4.<label>= it is use to identify the fields, that comes with "for" attr. 
+5.<textarea>= take bigger input , addr., cmts , etc.
+6.<select>&<option>= use to create dropdown
+		e.g.= 6-line
+
+
+	HOW TO CREATE CHECK BOX :
+e.g. code-6line
+
+	HOW TO CREATE Radio Button :
+e.g. code-6line
+
+** Attr. use with the form:
+1. type= use with i/p tag and button
+	verity of type available are text , password, number, date, email, url etc;
+2. id=it is use to uniquely identify the fields
+3. pattern= use to add validation for the field like the field should access 8 char, only numbers, only uppercase alph, atleast one special symbol, etc.
+	for adding validation we pass regulr expression, we pass regex with ptrn attr.
+4.value= it is use to set some default vaues to the fields, 
+	ex.- <input type="text" value="+91"/>
+5.name= it is used with radio btn, that help use to achieve  single selection	
+6.for =it is uses with labeled tag that help use to point toward the field using id's
+	ex.-3-line;
+(for ng and id eng is same)
+7. readonly= we cant update / modify it make it only readable
+8. disabled= mostly use with btn keep it disabled.
+9. placeholder=use to give temp. lael to feilds
+10. checked =fiantly select the checkboxes or radio btns
+11. acceskey= use to access the element with shortcut, in combination with alt
+12. title= use to get toolkit(popup) when we hover on the elements.
+13. role= make code more readable 
+14.autofocus= use to focus any of the feild fron the page when the user visit he page
+15. draggable = it is use to enable the to dragging for ele. so we can achieve 
+16. min=it is use to set min & maxvalue for the ele. ex- 2- line
+17. minlength & maxlength= use to set min and max number of char that field can accept  ex. <input type="text" minlength="10"  maxlength="10"/>
+18. required = makes the field mandatory 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

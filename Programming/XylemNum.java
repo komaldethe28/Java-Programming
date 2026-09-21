@@ -17,9 +17,9 @@ class XylemNum{
        int ods=ld+num;
 
         if(ids==ods) 
-            System.out.println("XylemNum") ;
+            System.out.println("Xylem Number") ;
         else
-            System.out.println("not a XylemNum");   
+            System.out.println("not a Xylem Number");   
         
     }
 }

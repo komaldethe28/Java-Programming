@@ -9,7 +9,6 @@ class SumOfOuterDigit{
         int ld=num%10;
         outerD=outerD+ld;
 
-
         while(num>9){
             num/=10;
         }

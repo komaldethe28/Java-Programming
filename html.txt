@@ -1,16 +1,10 @@
-it occupy view port width
-it start in new line
-we can provide height and width
-exa.= <h1>,  <p>, <li> etc...
-
 ** inline elements= it occupy only content width
 it start in a same line
-we cant provide height and width 
+we can't provide height and width 
 exa.= formatting ags ,<a> , <input> etc...
 
-** attributs= attributs means properties
-which given to the tags to provide additional information aout the tags
-attributs are given in opening tags	
+** attributes= attributes means properties which given to the tags to provide additional information about the tags
+attributes are given in opening tags	
 	types- 
 		1) core attributes- the attr which are use in each and every tag are known as core atributs
 		exa.- title, id etc.
@@ -27,7 +21,7 @@ collection of data
 		we can change order in to alphabetic / roman num. by using type attr
 		attr used i ordered list - type, reverse, start
 		
-	2) Unordered list- where the data will display in the form of bllet points
+	2) Unordered list- where the data will display in the form of bullet points
 		here no need to follow any seq.
 		the default type is disk
 		we can use type attr to change the squre and circle 
@@ -44,7 +38,7 @@ Semantic tag=(imp.)
 	this tags are SEO friendly tags
 	
 Table=
-	table is use to visualizwethe data in rows and columns
+	table is use to visualizable data in rows and columns
 	horiz. are rows and vertical are the columns
 	we always create table row by row
 	tags using tables-> 1. table

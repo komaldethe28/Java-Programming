@@ -27,6 +27,7 @@ class DisariumNum{
         num/=10;
         count--;
     }
+    
         if (sum==temp)
             System.out.println("number is Disarium");
         else

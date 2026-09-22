@@ -1,0 +1,15 @@
+section {
+    height: 200px;
+    background: yellow;
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    gap: 30px;
+}
+
+article {
+    height: 100px;
+    width: 100px;
+    background: red;
+    border: solid;
+}

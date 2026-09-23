@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  background: #f3f4f6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vscode-window {
+  width: 100vw;
+  height: 100vh;
+  background: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.titlebar {
+  height: 38px;
+  background: #e8ebf7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  border-bottom: 1px solid #d2d8ef;
+}
+
+.menu-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  font-size: 16px;
+  color: #0f172a;
+  margin-right: 8px;
+}
+
+.menu-item {
+  font-size: 12px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-arrow {
+  font-size: 16px;
+  color: #111827;
+  opacity: 0.8;
+}
+
+.searchbar {
+  width: 260px;
+  height: 18px;
+  border: 1px solid rgba(17, 24, 39, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.window-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 180px;
+}
+
+.control {
+  font-size: 18px;
+  color: #111827;
+}
+
+.workspace {
+  display: flex;
+  height: calc(100% - 38px);
+ 
+}
+
+.icon-bar {
+  width: 58px;
+  background: #efefef;
+  border-right: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  gap: 18px;
+}
+
+.activity-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-size: 16px;
+}
+
+.icon-bar .activity-icon active {
+  background: #dfe3f7;
+  color: #111827;
+}
+
+.explorer {
+  width: 220px;
+  background: #f2f2f2;
+  border-right: 1px solid #d9d9d9;
+  color: #303030;
+}
+
+.explorer-header {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.tree-item {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #444;
+}
+
+.tree-item.root {
+  color: #111827;
+  font-weight: 600;
+}
+
+.editor-area {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-tabs {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.tab {
+  min-width: 160px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-size: 12px;
+  border-right: 1px solid #d9d9d9;
+}
+
+.tab.active {
+  background: #ffffff;
+  color: #111827;
+}
+
+.code-panel {
+  flex: 1;
+  background: #ffffff;
+  color: #222;
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 24px;
+  padding-left: 12px;
+}
+
+.numbers {
+  display: inline-block;
+  width: 18px;
+  text-align: right;
+  color: #5c5c5c;
+}
+
+.code-keyword {
+  color: #c586c0;
+}
+
+.code-space {
+  width: 12px;
+  display: inline-block;
+}

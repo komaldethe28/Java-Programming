@@ -29,9 +29,9 @@ class {
 19. Armstrong Number (Count digit then power the count to all digit and add digit, if addition is the og number then the number is armstrong num else its not)[exa:153]-ArmstrongNum
 20. Sum Of Outer Digit-SumOfOuterDigit
 21. Sum Of Inner Digit-SumOfInnerDigit
-22. XylemNum (Sum of oter digit is equal to the sum of inner digit)[exa:1245] -XylemNum.java
-23. Automorpic Number(numbers squre is and nmberof digit in the number is eaual to that numbers squres place is equal or not)[exa. 5=25]
-24. WAP to check whether umber will divide equally or not
+22. XylemNum (Sum of outer digit is equal to the sum of inner digit)[exa:1245] -XylemNum.java
+23. Automorpic Number(numbers squre is and number of digit in the number is eqaual to that numbers squres place is equal or not)[exa. 5=25]
+24. WAP to check whether number will divide equally or not
 25. Disarium number (integer where the sum of its digits raised to the power of their respective positions(from left to right, starting at 1) equals the number itself) [exa.89=(8^1)+(9^2)=8+81= 89 ]
 26. Print Frequency Of Each Digit 
 27. Print Only Duplicate Elements
@@ -47,4 +47,11 @@ class {
 37. First missing elements
 38. last missing elements
 40. Tech number
+41. Twisted Prime Number
+42. Emirp Number
 
+43. Ugly Number
+44. Magic Number
+45. Happy Number
+46. GCD: greatest common divider
+48. Common Factor Of Two Number

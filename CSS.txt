@@ -1,0 +1,22 @@
+     ##CSS##
+# POSITION ->
+only after giving position top, left, right and bottom will work.
+z-index used to on top to other box we can give it 1 and -1 (1 = on top and -1 = on behind)
+1. static =its default 
+		static means cannot move
+
+2. relative=     it will move in document 
+			original position is not living but 
+			so the other box unable to take its place
+		    			
+3. absolute=   it also come out of document like relative 
+			but in this it will leave the original place of itself
+			so the other box able to take its place
+
+4. fixed =fixed the position in page 
+		
+5. sticky= combination of relative + fixed
+		first it will be scrolling later it will be fixed
+
+
+#backf

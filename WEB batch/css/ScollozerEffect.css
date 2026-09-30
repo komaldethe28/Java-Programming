@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    width: 70%;
+    height: 70vh;
+    border: 1px solid black;
+    display: flex;
+    /* flex-wrap: wrap; */
+    overflow: auto;
+    align-items: center;
+    gap: 30px;
+}
+div{
+    min-width: 30%;
+    height: 70%;
+    border: 1px solid red;
+}

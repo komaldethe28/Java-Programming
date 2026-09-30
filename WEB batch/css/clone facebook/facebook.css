@@ -1,0 +1,132 @@
+body {
+   color: #000000;
+   min-height: 100vh;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.left-section {
+    width: 51%;
+    min-height: 100vh;
+    position: relative;
+    border-right: 1px solid #b7b2b2;
+    overflow: hidden;
+}
+
+.facebook-logo {
+    position: absolute;
+    top: 42px;
+    left: 45px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+.Facebook {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    top: 70px;
+    left: 30%;
+    z-index: 1;
+}
+
+.Facebook img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.main-text {
+    position: absolute;
+    left: 40px;
+    bottom: 55px;
+    font-size: 57px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.text {
+    color: #0866ff;
+}
+
+.right-section {
+    width: 49%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 550px;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-box h2 {
+    text-align: left;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-box input {
+    width: 100%;
+    height: 60px;
+    display: block;
+    margin-bottom: 12px;
+    padding: 0 16px;
+    border: 1px solid #ccd0d5;
+    border-radius: 17px;
+    outline: none;
+    font-size: 15px;
+    background-color: #ffffff;
+}
+
+.login-btn {
+    width: 100%;
+    height: 45px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #0866ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 25px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+    margin: 30px 0;
+}
+
+.create-btn {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #0866ff;
+    background-color: #ffffff;
+    color: #0866ff;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+}

@@ -46,12 +46,11 @@ class {
 36. Print Count of all unique digits
 37. First missing elements
 38. last missing elements
-40. Tech number
-41. Twisted Prime Number
-42. Emirp Number
-
-43. Ugly Number
-44. Magic Number
-45. Happy Number
-46. GCD: greatest common divider
-48. Common Factor Of Two Number
+39. Tech number
+40. Twisted Prime Number
+41. Emirp Number
+42. Ugly Number
+43. Magic Number
+44. Happy Number
+45. GCD: greatest common divider
+46. Common Factor Of Two Number

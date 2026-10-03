@@ -1,0 +1,71 @@
+#header {
+    height: 50px;
+    width: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 50px;
+    align-items: center;
+    font-size: 20px;
+    display: flex;
+}
+
+#header > div {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+#men-dd {
+    background-color: rgba(255, 0, 0, 0.406);
+}
+
+#women-dd {
+    background-color: rgba(0, 255, 51, 0.364);
+}
+
+#kids-dd {
+    background-color: rgba(255, 0, 204, 0.744);
+}
+
+#beauty-dd {
+    background-color: rgba(212, 255, 0, 0.565);
+}
+
+#shoes-dd {
+    background-color: rgba(230, 0, 255, 0.371);
+}
+
+#header > div:hover > .dropdown,
+#header > .dropdown {
+    display: flex;
+}
+
+.dropdown > div {
+    flex: 1;
+}
+
+h5 {
+    margin: 20px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+

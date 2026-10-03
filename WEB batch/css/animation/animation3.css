@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    animation-name: Box;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes Box{
+    25%{
+        background-color: blue;
+        transform: scale(1.5);
+        border-radius: 15%;
+
+        
+    }
+    50%{
+        background-color: green;
+        transform: scale(2);
+        border-radius: 30%;
+    }
+    75%{
+        background-color: yellow;
+        transform: scale(1.5);
+        border-radius: 35%;
+    }
+    100%{
+        background-color: red;
+        transform: scale(1);
+        border-radius: 40%;
+
+    }
+}

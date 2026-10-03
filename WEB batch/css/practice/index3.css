@@ -1,0 +1,23 @@
+body{
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#box{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition-duration: 3s;
+    /* transition-delay: 3s; */
+}
+#box:hover{
+    /* transform: scale(3); */
+     background-color: blue;
+     color: white;
+    /* transform: rotate(40000deg) scale(3); */
+    /* transform: translate(200px , -200px); */
+    transform: skew(20deg, 20deg) translate(200px , -200px);
+
+}

@@ -25,7 +25,5 @@ class AutomorpicNum{
         	System.out.println(temp+" is Automorpic Number");
         else
         	System.out.println(temp+" is not a Automorpic Number");
-        
-
     }
 }

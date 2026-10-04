@@ -23,5 +23,5 @@ class StrongNum {
         else {
             System.out.println(dup+ " not a Strong number");
         }
-       }
+    }
 }

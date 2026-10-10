@@ -84,3 +84,20 @@ class {
 73. Pronic Number
 74. Min digit
 75. Max digit
+
+        Range Codes:
+76. Prime number- PrimeInRange
+77. SPY number
+78. NEON num
+79. Harshad num
+80. Perfect num
+81. Perfect Squ
+82. Sunny Num
+83. Pronic Num
+84. Strong Num
+85. Armstrong Num
+86. Tech Num
+87. Armstrong Num
+88. Evil Num
+89. Disarium Num
+90. Palindrome Num

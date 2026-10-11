@@ -5,12 +5,12 @@ class StrongNum{
 		System.out.print("enter a number: ");
 		int num=sc.nextInt();
 		
-		System.out.println("is strong number- " +isStrong(num));
+		System.out.println("is strong number?- " +isStrong(num));
 	}
 
 	public static int fact(int num, int fact){
-		if(num==1){
-			return fact;
+		if (num == 0 || num == 1) {
+ 		   return fact;
 		}
 		return fact(num-1, fact*num);
 	}

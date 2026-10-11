@@ -20,7 +20,7 @@ class TechNum{
 		if(num==0){
 			return count;
 		}
-		return count(num/10, count+1);
+		return count(num/10, count+1);     
 	}
 
 	public static int power(int power, int res){

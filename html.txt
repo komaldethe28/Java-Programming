@@ -56,12 +56,12 @@ form=
 it use take i/p from user
 
 tags use i form=
-1. <form>=it hold all the form related content
+1. <form>=it hold all the form related content.
 2. <input>= inline and unpaid ele. which can take verity of inputs like checkbox, radio, email password, etc
 3.<button>= default type is submit which we can change to reset that clear current entire form
 4.<label>= it is use to identify the fields, that comes with "for" attr. 
 5.<textarea>= take bigger input , addr., cmts , etc.
-6.<select>&<option>= use to create dropdown
+6.<select>&<option>= use to create dropdown.
 		e.g.= 6-line
 
 
@@ -85,7 +85,7 @@ e.g. code-6line
 (for ng and id eng is same)
 7. readonly= we cant update / modify it make it only readable
 8. disabled= mostly use with btn keep it disabled.
-9. placeholder=use to give temp. lael to feilds
+9. placeholder=use to give temp. label to fields
 10. checked =fiantly select the checkboxes or radio btns
 11. acceskey= use to access the element with shortcut, in combination with alt
 12. title= use to get toolkit(popup) when we hover on the elements.
@@ -95,6 +95,14 @@ e.g. code-6line
 16. min=it is use to set min & maxvalue for the ele. ex- 2- line
 17. minlength & maxlength= use to set min and max number of char that field can accept  ex. <input type="text" minlength="10"  maxlength="10"/>
 18. required = makes the field mandatory 
+
+
+
+
+
+
+
+
 
 
 

@@ -2,11 +2,8 @@ import java.util.Scanner;
 class SPYBreak{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a Range1: ");
-        int Range1 = sc.nextInt();
-        System.out.print("Enter a Range2: ");
-        int Range2 = sc.nextInt();
-
+        System.out.print("Enter a Number: ");
+        int num = sc.nextInt();
         int sum=0;
         int product=1;
         int lastDigit=0;

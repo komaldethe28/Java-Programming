@@ -15,7 +15,6 @@ class CountOfAllDuplicates{
                 if (ld == i) {
                     count++;
                 }
-
                 temp /= 10;
             }
 
@@ -25,6 +24,6 @@ class CountOfAllDuplicates{
                 
             }
         }
-System.out.print("Count of all duplicates is :- "+countDup);
+    System.out.print("Count of all duplicates is :- "+countDup);
     }
 }

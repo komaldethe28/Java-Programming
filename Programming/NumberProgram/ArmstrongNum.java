@@ -14,6 +14,7 @@ class ArmstrongNum{
         }
         num=temp;
         int sum=0;
+        
         while(num>0){
             int ld=num%10;
             int res=1;

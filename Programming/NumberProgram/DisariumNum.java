@@ -7,26 +7,24 @@ class DisariumNum{
         int num= sc.nextInt();
 
         int temp=num;
-
         int count=0; 
         while(num!=0){
             count++;
             num/=10;
-        }       
-        num=temp;
+        } 
 
+        num=temp;
         int sum=0;
-        
         while(num>0){
             int ld=num%10;
             int res=1;
             for(int i=1; i<=count; i++){
                 res=res*ld;
             }
-        sum=sum+res;
-        num/=10;
-        count--;
-    }
+            sum=sum+res;
+            num/=10;
+            count--;
+        }
     
         if (sum==temp)
             System.out.println("number is Disarium");

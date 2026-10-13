@@ -5,12 +5,13 @@ class TechNum{
 		System.out.print("enter a number: ");
 		int num=sc.nextInt();
 		int count=count(num,0);
+
 		if (count %2==0) {
 			boolean ans=isTech(num, count/2);
 			if(ans){
-				System.out.println("is tech number");
+				System.out.println(num+ " is tech number");
 			}else{
-				System.out.println("is not tech number");
+				System.out.println(num+ " is not tech number");
 			}
 		}else{
 			System.out.println("not even and tech number");

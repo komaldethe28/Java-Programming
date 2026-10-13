@@ -2,7 +2,7 @@ import java.util.Scanner;
 class HappyNum{
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter a number:");
+        System.out.print("Enter a number:");  //19
         int num= sc.nextInt();
         
         do{
@@ -13,8 +13,8 @@ class HappyNum{
                 num/=10;  
             }
             num=sum;
-        }
-        while(num>9);
+        }while(num>9);
+
         if(num==1)
             System.out.println("its a Happy number...");
         else

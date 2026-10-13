@@ -8,7 +8,6 @@ class DecToBin{
 			return bin;
 		}
 		// 1st way
-
 		/*
 		int ld=num%2;
 		bin=bin+ld*place;

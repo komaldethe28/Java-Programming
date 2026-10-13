@@ -14,6 +14,6 @@ class CountOf0s{
 			}
 			num/=2;
 		}
-System.out.println("Count="+ count);
+	System.out.println("Count="+ count);
 	}
 }

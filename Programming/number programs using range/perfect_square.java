@@ -9,7 +9,7 @@ class perfect_square{
             for (int i = 1; i * i <= num; i++) {
                 if (i * i == num) {
                     System.out.println("Perfect square: " + num);
-                    break;
+                    // break;
                 }
             }
         }

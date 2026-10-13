@@ -1,3 +1,4 @@
+// FACTORIAL OF DIGIT FACTORIAL
 import java.util.Scanner;
 class DigitFact {
     public static void main(String [] args){

@@ -1,5 +1,4 @@
-//WAP to check whether umber will divide equally or not
-
+//WAP to check whether number will divide equally or not
 import java.util.Scanner;
 class EquallyDiv{
     public static void main(String [] args){

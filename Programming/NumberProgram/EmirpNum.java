@@ -28,12 +28,10 @@ class EmirpNum{
                 if(countRev==2){
                     System.out.println("its Emirp Number...");
                 }
-            }
-            else{
+            }else{
                 System.out.println("its not Emirp Number...");
             }
-        } 
-        else {
+        }else {
             System.out.print("invalid number");
         }
     }

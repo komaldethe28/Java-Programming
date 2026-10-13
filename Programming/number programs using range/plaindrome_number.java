@@ -9,8 +9,7 @@ class palindrome_number{
             int temp = num;
             int reverse = 0;
             while (temp > 0) {
-                int digit = temp % 10;
-                reverse = reverse * 10 + digit;
+                reverse = reverse * 10 + temp % 10;
                 temp = temp / 10;
             }
             if (reverse == num) {
